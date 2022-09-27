@@ -1,0 +1,489 @@
+/* ALL PAGES */
+@font-face {
+  font-family: Lora;
+  src: url(fonts/Lora.woff);
+}
+@font-face {
+  font-family: Spectral;
+  src: url(fonts/Spectral.woff);
+}
+@font-face {
+  font-family: Satisfy;
+  src: url(fonts/Satisfy.woff);
+}
+body {
+	font-family: Spectral;
+	background-color: #75a8d6;
+	margin: 0;
+	color: #e6ecff;
+	font-size: 16px;
+}
+.yellow {
+	font-size: 18px;
+	color: #f1c232;
+}
+@media only screen and (max-width: 400px) {
+	body {
+		font-size: 11px;
+	}
+	.yellow {
+		font-size: 13px;
+	}
+}
+
+#header {
+	position: fixed;
+	width: 100%;
+	background-color: #5276ae;
+	color: #f1c232;
+	display: flex;
+	margin-bottom: 1%;
+	height: 75px;
+	z-index: 100;
+	top: 0;
+}
+#title {
+	font-family: Satisfy;
+	width: 50%;
+	padding-left: 30px;
+	margin: 16px 0;
+	font-size: 34px;
+	white-space: nowrap;
+}
+#menu {
+	width: 50%;
+	padding-left: 0;
+	padding-right: 30px;
+	font-family: Lora;
+	font-size: 22px;
+	display: flex;
+	justify-content: right;
+	list-style-type: none;
+	height: 100%;
+}
+#menu li a {
+	color: inherit;
+	text-decoration: none;
+	vertical-align: center;
+	height: 100%; 
+	padding: 8px;
+}
+#menu li a:hover {
+	color: #bf920d;
+}
+#mobileNav {
+	display: none;
+}
+@media only screen and (max-width: 650px) {
+	#mobileNav {
+		display: flex;
+		width: 10%;
+		
+		margin-top: 10px;
+	}
+	#mobileNavIcon {
+		width: 1em;
+		margin-left: 50%;
+		color: #f1c232;
+		font-size: 32px;
+	}
+	#title { 
+		width: 85%;
+    font-size: 28px;
+	}
+	#menu {
+		display: none;
+	}
+	#mobileMenu {
+		text-align: left;
+		list-style: none;
+		width: 100%;
+		z-index: 10;
+		top: 75px;
+		margin: 0;
+		position: absolute;
+		background-color: rgba(82, 118, 174, 90%);
+    font-size: 14px;
+	}
+	#mobileMenu a {
+		text-decoration: none;
+		color: #f1c232;
+		display: block;
+		margin-left: 2%;
+		padding-bottom: .5em;
+	}
+	
+}
+@media only screen and (max-width: 400px) {
+	#mobileNavIcon {
+		font-size: 27px;
+	}
+	#title {
+		font-size: 24px;
+	}
+}
+@media only screen and (max-width: 310px) {
+  #header {
+    height: 50px;
+  }
+	#mobileNavIcon {
+		font-size: 18px;
+	}
+	#title {
+		font-size: 16px;
+    margin-left: -15px;
+	}
+  #mobileMenu {
+    top: 50px;
+  }
+}
+
+/* HOME */
+#homeTop {
+	width: 80%;
+	height: auto;
+	margin: 100px auto 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+#cesDesc {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
+#contactUs {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 2;
+	grid-row-end: 2;
+}
+#ownerPic {
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: -1;
+}
+#ownerPic {
+	position: relative;
+	height: 55vmin;
+}
+#ownerPic img {
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	/*margin-left: 15px;*/
+}
+#ownerDesc {
+	display: none;
+}
+@media only screen and (max-width: 1000px) {
+	#homeTop {
+		width: 90%;
+	}
+	#ownerPic {
+		height: 45vmin;
+	}
+}
+@media only screen and (max-width: 650px) {
+	#homeTop {
+		width: 92%;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto;
+	}
+	#cesDesc {
+		grid-column-start: 1;
+		grid-column-end: -1;
+		grid-row-start: 1;
+		grid-row-end: 1;
+	}
+	#ownerPic {
+		grid-column-start: 1;
+		grid-column-end: 1;
+		grid-row-start: 2;
+		grid-row-end: 2;
+	}
+	#ownerDesc {
+		grid-column-start: 2;
+		grid-column-end: 2;
+		grid-row-start: 2;
+		grid-row-end: 2;
+	}
+	#contactUs {
+		grid-column-start: 1;
+		grid-column-end: -1;
+		grid-row-start: 3;
+		grid-row-end: 3;
+	}
+	#ownerPic {
+		width: calc(100% - 14px);
+		margin-bottom: 20px;
+		margin-left: 15px;
+		box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.5);
+	}
+	#ownerPic img {
+		width: 100%;
+	}
+	#ownerPic .label {
+		display: none;
+	}
+}
+@media only screen and (max-width: 400px) {
+	#homeTop {
+		width: 96%;
+	}
+}
+@media only screen and (max-width: 310px) {
+  #homeTop {
+    margin-top: 60px;
+  }
+  #ownerPic {
+    display: none;
+  }
+  #ownerDesc {
+		grid-column-start: 1;
+    grid-column-end: -1;
+	}
+}
+.label {
+	text-align: center;
+	position: absolute;
+	background-color: grey;
+	color: black;
+	transform: translate(-50%, 0);
+	padding: 2px;
+	white-space: nowrap;
+	
+}
+#ownerPic .label {
+	top: 90%;
+	left: 50%;
+}
+#cesDesc, #contactUs, #footer, #ourStory, #ownerDesc {
+	padding: 8px;
+	background-color: #638ccf;
+	margin: 0 15px 20px;
+	box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 650px) {
+	#ownerDesc {
+		display: block;
+		margin-left: 0;
+		z-index: 1;
+	}
+}
+@media only screen and (max-width: 310px) {
+	#ownerDesc {
+		margin-left: 15px;
+	}
+}
+#ourStory {
+	width: 60%;
+	margin: auto;
+	position: relative;
+	height: 40%;
+	padding-bottom: 3%;
+}
+#ourStory img {
+	position: absolute;
+	width: 70%;
+	left: 50%;
+	top: 80%;
+	transform: translate(-50%, 0);
+}
+@media only screen and (max-width: 1000px) {
+	#ourStory img {
+		top: calc(100% + 8px);
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 650px) {
+	#ourStory {
+		width: calc(92% - 46px);
+		margin: auto;
+		padding: 8px;
+	}
+	#ourStory img {
+		width: 100%;
+		padding-bottom: 30px;
+	}
+}
+@media only screen and (max-width: 400px) {
+  #ourStory {
+    width: calc(96% - 46px);
+  }
+}
+#footer {
+  font-size: 18px;
+	height: calc(16px + 5em);
+	margin: auto;
+	margin-top: calc(225px + 5%);
+	margin-bottom: 5%;
+	display: flex;
+	justify-content: right;
+	position: relative;
+}
+#footer .yellow {
+  font-size: 20px;
+}
+@media only screen and (max-width: 1000px) {
+	#footer {
+		margin-top: calc(160px + 15%);
+	}
+}
+@media only screen and (max-width: 650px) {
+	#footer {
+		display: none;
+	}
+}
+#myCar {
+	height: 130%;
+	position: absolute;
+	top: -15%;
+	left: 8%;
+}
+#myCar img {
+	height: 100%;
+}
+#myCar .label {
+	width: 75%;
+	top: 75%;
+	left: 50%;
+}
+#contactInfo {
+	align-self: right;
+	margin-right: calc(4% + 8px);
+}
+.formRow {
+	display: flex;
+	justify-content: space-between;
+	border-spacing: 0px;
+	width: 100%;
+}
+.formRow input {
+	margin: 5px;
+	display: table-cell;
+	border-radius: 4px;
+	border: 1px;
+	vertical-align: top;
+}
+.formRow input:not([placeholder='Message...']) {
+	width: calc(50% - 18px);
+}
+.formRow input[placeholder='Message...'] {
+	height: 100px;
+	width: calc(100% - 14px);
+}
+@media only screen and (max-width: 650px) {
+	.formRow input {
+		font-size: 12px;
+	}
+}
+/* TESTIMONIALS */
+#testimonials {
+	box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.5);
+	padding: 8px;
+	background-color: #638ccf;
+	width: 60%;
+	margin: 100px auto 0;
+	margin-bottom: 26px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#testimonials .yellow {
+	width: 100%;
+}
+.testRow {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	border-spacing: 10px;
+}
+.testimonial {
+	display: table-cell;
+	background-color: #5d83c0;
+	margin: 4px;
+	padding: 5px;
+	box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.5);
+  width: calc(33.33% - 18px);
+}
+.author {
+	text-align: right;
+	vertical-align: bottom;
+}
+@media only screen and (max-width: 1000px) {
+  #testimonials {
+    width: 80%;
+  }
+	.testimonial {
+    width: calc(50% - 18px);
+  }
+}
+@media only screen and (max-width: 650px) {
+  #testimonials {
+    width: 85%;
+  }
+	.testimonial {
+    width: calc(100% - 18px);
+  }
+}
+@media only screen and (max-width: 310px) {
+  #testimonials {
+    margin-top: 75px;
+  }
+}
+
+/* Pop-Up */
+#popUp {
+  border: 2px solid #f1c232;
+  padding: 5px;
+  z-index: 20;
+  position: fixed;
+  top: 30%;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  background-color: #2a438c;
+}
+#popUpTitle {
+  text-align: center;
+  font-size: 30px;
+}
+#popUpDesc {
+  text-align: center;
+}
+#popUp button {
+  background-color: #d92332;
+  color: #f2f2f2;
+  border-radius: 15px;
+  width: 100%;
+  margin: 30px 0 0;
+  height: 30px;
+  left: 50%;
+  border: 0;
+  cursor: pointer;
+}
+#popUpInput {
+  width: 80%;
+  border-radius: 10px;
+  margin-top: 20px;
+  resize: none;
+	padding: 10px;
+}
+@media only screen and (max-width: 1000px) {
+  #popUp {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #popUp {
+    width: 70%;
+    font-size: 15px;
+  }
+  #popUpTitle {
+    font-size: 24px;
+  }
+}
