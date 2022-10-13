@@ -1,4 +1,4 @@
-const ownerMail = "";
+const ownerMail = "https://script.google.com/macros/s/AKfycbzfrorA6-6WmlNqmnA2YZ_PjcWQH3n62te82wr3Osxr0y2bWlh90BgjI5MW_ETbQcJiQQ/exec";
 const devMail = "https://script.google.com/macros/s/AKfycbwj8er80p4-Eg6wKhPlt-JYzfAHFLqSF27gPq0nN9c3W33x7PkRSgBs_q6goUVS6L9JgA/exec";
 
 let msg = "";
@@ -33,7 +33,7 @@ $('#contactUs').on('submit',function(e){
     document.getElementById("contactUs").reset();
     const error = "Something went wrong. Please try again";
     $.ajax({
-      url: devMail, //make sure this is ownerMail in actual release
+      url: ownerMail, //make sure this is ownerMail in actual release
       method: "POST",
       dataType: "json",
       data: serializedForm,
